@@ -1,0 +1,195 @@
+body{
+    font-family:'Montserrat', sans-serif;
+    font-weight:300;
+    font-size:14px;
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+}
+
+/*NAV BAR*/
+nav{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background: rgb(83, 82, 82);
+    font-family:'Montserrat', sans-serif;
+}
+.logo{
+    color:rgb(209, 205, 205);
+    text-transform: uppercase;
+    letter-spacing:5px;
+    font-size:20px
+}
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width:30%;
+
+}
+.nav-links li{
+    list-style: none;
+}
+.nav-links a{
+    color: rgb(209, 205, 205);
+    text-decoration:none;
+    letter-spacing: 3px;
+    font-weight:bold;
+    font-size:14px;
+}
+
+
+/*home page*/
+.wrapper .left, 
+.wrapper .right{
+        width:100%;
+        height:50vh;
+        position: relative;
+        overflow:hidden;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+}
+/*Image and Image size home page*/
+.wrapper .image{
+    width: 100%;
+    height: 100%;
+    background-size:cover;
+    background-position:center;
+    position: absolute;
+    top:0;
+    left:0;
+    transition:0.25s ease all;
+}
+.work{
+    background:url('workex.jpg');
+}
+.aboutme{
+    background:url('Resume.jpg');
+}
+/*------*/
+
+
+/*letter button box*/
+.wrapper .caption {
+    position:relative;
+    z-index: 10;
+    color: white;
+    text-align: center;
+}
+.wrapper .caption h1{
+    text-transform: uppercase;
+    letter-spacing:0.25em;
+}
+.wrapper .caption .button{
+    background:black;
+    color:white;
+    padding: 1em 2em;
+    text-decoration:none;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing:0.05em;
+    transition:0.25s ease all;
+
+}
+.wrapper .caption .button:hover {
+    background:rgb(182, 180, 180);
+    color:black;
+}
+/*------*/
+
+/*shade to see text more clear*/
+.wrapper .side::before{
+    background:rgba(0,0,0,0.1.5);
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1;
+    content:' ';
+    display: block;
+
+}
+/*see text*/
+.wrapper .caption{
+    position:relative;
+    /*to make sure its not behind the shade layer*/
+    z-index:10;
+    /**/
+}
+/*-----*/
+/*Hover Function*/
+.wrapper .left:hover .image,
+.wrapper .right:hover .image{
+    transform: scale(1.2);
+}
+/*when 1200px screen will become 50%*/
+@media screen and (min-width:1200px)
+{
+    .wrapper{
+        display:flex;
+    }
+
+
+    .wrapper .left, 
+    .wrapper .right{
+        width:50%;
+        height:100vh;
+    }
+}
+
+
+/*Footer*/
+.footer{
+    padding:40px;
+    background-color:rgb(56, 56, 56);
+
+
+}
+.footer .social{
+    text-align: center;
+    padding-bottom:25px;
+    color:grey;
+
+}
+
+.footer .social a{
+    font-size:24px;
+    color:whitesmoke;
+    border: 1px solid #ccc;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    opacity: 0.75;
+}
+
+.footer .social a:hover{
+    opacity: 0.9;
+}
+.footer ul{
+    margin-top: 0;
+    padding:0;
+    list-style: none;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+.footer ul a {
+    color: white;
+    text-decoration:none;
+    opacity: 0.8;
+}
+.footer ul li{
+    display:inline-block;
+    padding: 0 15px;
+}
+.footer ul li a:hover{
+    opacity:1;
+}
